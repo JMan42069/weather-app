@@ -1,5 +1,15 @@
 .App {
   text-align: center;
+  background-color: #282c34; 
+  display: grid;
+  width: 100%;
+  height: 100vh;
+  grid:
+    "header" auto
+    "main" 1fr
+    "footer" auto
+    / 1fr;
+  gap: 8px;
 }
 
 .App-logo {
@@ -14,15 +24,19 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  grid-area: header;
 }
+.App-body {
+  grid-area: main;
+  align-items: center;
+  justify-items: center;
+  display: grid;
+
+}
+.App-footer {
+  grid-area: footer;
+}
+
 
 .App-link {
   color: #61dafb;
@@ -36,3 +50,14 @@
     transform: rotate(360deg);
   }
 }
+
+
+ .leaflet-container {
+  z-index: 1;
+  width: 80%;
+  height: 50vh;
+  } 
+
+  .important {
+    z-index: 2;
+  }
